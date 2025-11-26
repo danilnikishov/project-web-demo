@@ -152,7 +152,7 @@ watch(filters, fetchItems)
         </div>
         <select
           @change="onChangeSelect"
-          class="py-2 px-3 border border-gray-200 rounded-md outline-none w-full sm:w-auto text-sm sm:text-base"
+          class="py-3 px-4 border-2 border-gray-200 rounded-lg outline-none w-full text-base focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all"
         >
           <option value="">По умолчанию</option>
           <option value="price">По возрастанию цены</option>
