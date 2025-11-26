@@ -13,44 +13,44 @@ defineProps({
 
 <template>
   <div
-    class="relative bg-white border border-slate-100 rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+    class="relative bg-white border border-slate-100 rounded-3xl p-6 sm:p-8 cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
   >
-    <!-- Иконка избранного - УВЕЛИЧЕНА -->
+    <!-- Иконка избранного - КРУПНЕЕ -->
     <img
       v-if="onClickFavorite"
       :src="!isFavorite ? '/like-1.svg' : '/like-2.svg'"
       alt="Like 1"
-      class="absolute top-3 left-3 w-7 h-7 sm:top-4 sm:left-4 sm:w-8 sm:h-8 md:top-6 md:left-6 md:w-9 md:h-9 lg:top-8 lg:left-8 lg:w-10 lg:h-10 z-10 hover:scale-110 transition-transform"
+      class="absolute top-4 left-4 w-8 h-8 sm:top-5 sm:left-5 sm:w-9 sm:h-9 md:top-6 md:left-6 md:w-10 md:h-10 lg:top-8 lg:left-8 lg:w-11 lg:h-11 z-10 hover:scale-110 transition-transform"
       @click="onClickFavorite"
     />
 
-    <!-- Изображение товара - УВЕЛИЧЕНО -->
+    <!-- Изображение товара - КРУПНЕЕ -->
     <img
       :src="imageUrl"
       alt="sneaker"
-      class="w-32 h-32 xs:w-36 xs:h-36 sm:w-40 sm:h-40 md:w-44 md:h-44 lg:w-48 lg:h-48 xl:w-52 xl:h-52 mx-auto object-contain mb-4"
+      class="w-40 h-40 xs:w-44 xs:h-44 sm:w-48 sm:h-48 md:w-52 md:h-52 lg:w-56 lg:h-56 xl:w-60 xl:h-60 mx-auto object-contain mb-5"
     />
 
-    <!-- Название - УВЕЛИЧЕНО -->
+    <!-- Название - КРУПНЕЕ -->
     <p
-      class="mt-2 text-base xs:text-lg sm:text-xl md:text-2xl font-medium line-clamp-2 text-gray-800 min-h-12 flex items-center"
+      class="mt-3 text-lg xs:text-xl sm:text-2xl md:text-2xl font-semibold line-clamp-2 text-gray-800 min-h-16 flex items-center"
     >
       {{ title }}
     </p>
 
-    <div class="flex justify-between items-center mt-4 sm:mt-5 md:mt-6">
+    <div class="flex justify-between items-center mt-5 sm:mt-6 md:mt-7">
       <div class="flex flex-col">
-        <span class="text-slate-400 text-sm sm:text-base md:text-lg">Цена:</span>
-        <b class="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-900">{{ price }} руб.</b>
+        <span class="text-slate-400 text-base sm:text-lg md:text-xl">Цена:</span>
+        <b class="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-gray-900">{{ price }} руб.</b>
       </div>
 
-      <!-- Иконка добавления - УВЕЛИЧЕНА -->
+      <!-- Иконка добавления - КРУПНЕЕ -->
       <img
         v-if="onClickAdd"
         @click="onClickAdd"
         :src="!isAdded ? '/plus.svg' : '/checked.svg'"
         alt="Plus"
-        class="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 lg:w-11 lg:h-11 hover:scale-110 transition-transform cursor-pointer"
+        class="w-9 h-9 sm:w-10 sm:h-10 md:w-11 md:h-11 lg:w-12 lg:h-12 hover:scale-110 transition-transform cursor-pointer"
       />
     </div>
   </div>
